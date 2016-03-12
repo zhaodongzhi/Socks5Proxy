@@ -81,7 +81,8 @@ class TcpRelay:
             elif addrtype == 3:
                 domain_length = ord(data[1])
                 remote_domain = data[2:2+domain_length]
-                remote_port = struct.unpack('>H', data[2+domain_length:4+domain_length])[0]
+                remote_port = struct.unpack(
+                    '>H', data[2+domain_length:4+domain_length])[0]
                 remote_addr = (remote_domain, remote_port)
             remote_socket = socket.socket(
                 socket.AF_INET, socket.SOCK_STREAM, socket.SOL_TCP)

@@ -1,5 +1,5 @@
 {
-  "server_port": ,
+  "server_port": 8080,
   "server": ,
   "local": "127.0.0.1",
   "local_port": 1080 
